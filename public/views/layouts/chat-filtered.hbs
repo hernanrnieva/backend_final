@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+{{> header}}
+<body class="bg-dark">
+    <div class="container mt-3">
+        {{#if messages}}
+            {{#each messages}}
+                <div><p style="color: pink">[{{date}}] as {{type}} <b style="color: white">{{email}}</b>: <i style="color: turquoise">{{text}}</i></p></div>
+            {{/each}}
+        {{else}}
+            <h2 class="p-3" style="color: crimson; background-color: pink;">No messages found with this filter</h2>
+        {{/if}}
+    </div>
+</body>
+{{> footer}}

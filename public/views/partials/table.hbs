@@ -1,0 +1,26 @@
+<div class="container mt-3">
+    {{#if products}}
+        <div class="table-responsive">
+            <table class="table table-dark bg-secondary">
+                <tr style="color: yellow;">
+                    <th>Id</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Thumbnail</th>
+                    <th>Category</th>
+                </tr>
+                {{#each products}}
+                    <tr class="text-centered">
+                        <td>{{id}}</td>
+                        <td>{{description}}</td>
+                        <td>{{price}}</td>
+                        <td><img src="{{thumbnail}}" alt="" width="40px"></td>
+                        <td>{{category}}</td>
+                    </tr>
+                {{/each}}
+            </table>
+        </div>
+    {{else}}
+        <h2 class="p-3" style="color: crimson; background-color: pink;">No products have been loaded yet</h2>
+    {{/if}}
+</div>

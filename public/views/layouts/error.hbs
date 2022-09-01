@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+{{> header}}
+<body class="bg-dark">
+    <div class="container text-center my-3">
+        <div class="jumbotron" style="background-color: salmon;color: white;">
+            <h1>Error</h1>
+            <h2>{{errorMessage}}</h2>
+            {{#if errorStatus}}
+                <h3>Status code: {{errorStatus}}</h3>
+            {{/if}}
+        </div>
+    </div>
+</body>
+{{> footer}}
+

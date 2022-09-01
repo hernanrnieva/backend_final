@@ -1,0 +1,1300 @@
+{
+	"info": {
+		"_postman_id": "b36dc5cd-ebdd-4ba5-9a41-38306a1c76e1",
+		"name": "zz_final_heroku",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19823796"
+	},
+	"item": [
+		{
+			"name": "Usuario",
+			"item": [
+				{
+					"name": "Registrarse",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Hernan Nieva\",\r\n    \"email\": \"testemail@gmail.com\",\r\n    \"address\": \"351 763\",\r\n    \"password\": \"testpw\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://coder-backend-final-nieva.herokuapp.com/",
+							"protocol": "https",
+							"host": [
+								"coder-backend-final-nieva",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Loguearse",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"testemail@gmail.com\",\r\n    \"password\": \"testpw\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://coder-backend-final-nieva.herokuapp.com/login",
+							"protocol": "https",
+							"host": [
+								"coder-backend-final-nieva",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImVtYWlsIjoidGVzdGVtYWlsMTBAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMDQkd1o3Z0NsLktvRjZna3BVZ25kaWJOdXNFNTlVbmRzaUp5RGVDRlJiN04yb1RyRzBlUzl4WWkifSwiaWF0IjoxNjYxOTk5MDM4LCJleHAiOjE2NjIwODU0Mzh9.DVyt2xlvkFRpPxwNz31sCxFpwNLrm5oHxGzlruFS2eI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://coder-backend-final-nieva.herokuapp.com/logout",
+							"protocol": "https",
+							"host": [
+								"coder-backend-final-nieva",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener URL Inexistente",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImVtYWlsIjoidGVzdGVtYWlsQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDA0JHpxcjl4RmdMZS9DWVRJTkhHeHlRbi5PZDU1T0ZueVdCVk1iMlg1amRvSDUuR3puZGRoeU5tIn0sImlhdCI6MTY2MTk5NzU1MywiZXhwIjoxNjYyMDgzOTUzfQ.i85KqSB9iTkmikdin4BUhUDZJiMnkT8CaDxjjqiP54A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://coder-backend-final-nieva.herokuapp.com/unhandled",
+							"protocol": "https",
+							"host": [
+								"coder-backend-final-nieva",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"unhandled"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Configuraciones",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImVtYWlsIjoidGVzdGVtYWlsMTBAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMDQkd1o3Z0NsLktvRjZna3BVZ25kaWJOdXNFNTlVbmRzaUp5RGVDRlJiN04yb1RyRzBlUzl4WWkifSwiaWF0IjoxNjYxOTk5MDY4LCJleHAiOjE2NjIwODU0Njh9.omkNC7TiNaJtNzp0xZxJ93BRUQ8ggf_M2qLQJpsBKu8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://coder-backend-final-nieva.herokuapp.com/config",
+							"protocol": "https",
+							"host": [
+								"coder-backend-final-nieva",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"config"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Productos",
+			"item": [
+				{
+					"name": "Obtener Productos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImVtYWlsIjoidGVzdGVtYWlsMTBAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMDQkd1o3Z0NsLktvRjZna3BVZ25kaWJOdXNFNTlVbmRzaUp5RGVDRlJiN04yb1RyRzBlUzl4WWkifSwiaWF0IjoxNjYxOTk5MDY4LCJleHAiOjE2NjIwODU0Njh9.omkNC7TiNaJtNzp0xZxJ93BRUQ8ggf_M2qLQJpsBKu8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://coder-backend-final-nieva.herokuapp.com/products",
+							"protocol": "https",
+							"host": [
+								"coder-backend-final-nieva",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Producto 1",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImVtYWlsIjoidGVzdGVtYWlsMTBAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMDQkd1o3Z0NsLktvRjZna3BVZ25kaWJOdXNFNTlVbmRzaUp5RGVDRlJiN04yb1RyRzBlUzl4WWkifSwiaWF0IjoxNjYxOTk5MDY4LCJleHAiOjE2NjIwODU0Njh9.omkNC7TiNaJtNzp0xZxJ93BRUQ8ggf_M2qLQJpsBKu8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\" : \"Headphones made by Beat\",\r\n    \"thumbnail\": \"https://http2.mlstatic.com/D_NQ_NP_754087-MLA46910444721_072021-V.jpg\",\r\n    \"price\": 1200.05,\r\n    \"category\": \"Headphones\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://coder-backend-final-nieva.herokuapp.com/products",
+							"protocol": "https",
+							"host": [
+								"coder-backend-final-nieva",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Producto 2",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImVtYWlsIjoidGVzdGVtYWlsMTBAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMDQkd1o3Z0NsLktvRjZna3BVZ25kaWJOdXNFNTlVbmRzaUp5RGVDRlJiN04yb1RyRzBlUzl4WWkifSwiaWF0IjoxNjYxOTk5MDY4LCJleHAiOjE2NjIwODU0Njh9.omkNC7TiNaJtNzp0xZxJ93BRUQ8ggf_M2qLQJpsBKu8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\" : \"Headphones made by Logitech\",\r\n    \"thumbnail\": \"https://cdn.shopify.com/s/files/1/0024/9803/5810/products/520548-Product-0-I-637606430900838285_800x800.jpg?v=1625010365\",\r\n    \"price\": 1240.05,\r\n    \"category\": \"Headphones\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://coder-backend-final-nieva.herokuapp.com/products",
+							"protocol": "https",
+							"host": [
+								"coder-backend-final-nieva",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Producto 3",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImVtYWlsIjoidGVzdGVtYWlsQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDA0JHpxcjl4RmdMZS9DWVRJTkhHeHlRbi5PZDU1T0ZueVdCVk1iMlg1amRvSDUuR3puZGRoeU5tIn0sImlhdCI6MTY2MTk5NzU1MywiZXhwIjoxNjYyMDgzOTUzfQ.i85KqSB9iTkmikdin4BUhUDZJiMnkT8CaDxjjqiP54A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\" : \"Headphones made by HyperX\",\r\n    \"thumbnail\": \"https://cdn.shopify.com/s/files/1/0564/3612/9997/products/hyperx_cloud_ii_wireless_1_main.jpg?v=1655760985\",\r\n    \"price\": 1340.05,\r\n    \"category\": \"Headphones\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://coder-backend-final-nieva.herokuapp.com/products",
+							"protocol": "https",
+							"host": [
+								"coder-backend-final-nieva",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Producto 4",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImVtYWlsIjoidGVzdGVtYWlsQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDA0JHpxcjl4RmdMZS9DWVRJTkhHeHlRbi5PZDU1T0ZueVdCVk1iMlg1amRvSDUuR3puZGRoeU5tIn0sImlhdCI6MTY2MTk5NzU1MywiZXhwIjoxNjYyMDgzOTUzfQ.i85KqSB9iTkmikdin4BUhUDZJiMnkT8CaDxjjqiP54A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\" : \"Headphones made by Sony\",\r\n    \"thumbnail\": \"https://www.sony.com.ar/image/1b6af17f802705b185c2832ff6861696?fmt=pjpeg&wid=660&bgcolor=F1F5F9&bgc=F1F5F9\",\r\n    \"price\": 2340.05,\r\n    \"category\": \"Headphones\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://coder-backend-final-nieva.herokuapp.com/products",
+							"protocol": "https",
+							"host": [
+								"coder-backend-final-nieva",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Producto 5",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImVtYWlsIjoidGVzdGVtYWlsQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDA0JHpxcjl4RmdMZS9DWVRJTkhHeHlRbi5PZDU1T0ZueVdCVk1iMlg1amRvSDUuR3puZGRoeU5tIn0sImlhdCI6MTY2MTk5NzU1MywiZXhwIjoxNjYyMDgzOTUzfQ.i85KqSB9iTkmikdin4BUhUDZJiMnkT8CaDxjjqiP54A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\" : \"Headphones made by Apple\",\r\n    \"thumbnail\": \"https://www.apple.com/newsroom/images/product/airpods/standard/Apple_AirPods-3rd-gen_hero_10182021_inline.jpg.slideshow-medium_2x.jpg\",\r\n    \"price\": 2440.05,\r\n    \"category\": \"Airpods\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://coder-backend-final-nieva.herokuapp.com/products",
+							"protocol": "https",
+							"host": [
+								"coder-backend-final-nieva",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Producto con Propiedades Extra",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImVtYWlsIjoidGVzdGVtYWlsMTBAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMDQkd1o3Z0NsLktvRjZna3BVZ25kaWJOdXNFNTlVbmRzaUp5RGVDRlJiN04yb1RyRzBlUzl4WWkifSwiaWF0IjoxNjYxOTk5MDY4LCJleHAiOjE2NjIwODU0Njh9.omkNC7TiNaJtNzp0xZxJ93BRUQ8ggf_M2qLQJpsBKu8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\" : \"Brilliant Blue Ford Focus in the mountains\",\r\n    \"thumbnail\": \"https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/focus-st-edition-004-1629818858.jpg\",\r\n    \"price\": 1200.05,\r\n    \"category\": \"Headphones\",\r\n    \"extra\": 22\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://coder-backend-final-nieva.herokuapp.com/products",
+							"protocol": "https",
+							"host": [
+								"coder-backend-final-nieva",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Producto con Propiedades Menores",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImVtYWlsIjoidGVzdGVtYWlsMTBAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMDQkd1o3Z0NsLktvRjZna3BVZ25kaWJOdXNFNTlVbmRzaUp5RGVDRlJiN04yb1RyRzBlUzl4WWkifSwiaWF0IjoxNjYxOTk5MDY4LCJleHAiOjE2NjIwODU0Njh9.omkNC7TiNaJtNzp0xZxJ93BRUQ8ggf_M2qLQJpsBKu8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\" : \"Brilliant Blue Ford Focus in the mountains\",\r\n    \"thumbnail\": \"https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/focus-st-edition-004-1629818858.jpg\",\r\n    \"price\": 1200.05\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://coder-backend-final-nieva.herokuapp.com/products",
+							"protocol": "https",
+							"host": [
+								"coder-backend-final-nieva",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Producto con Propiedades Erróneas",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImVtYWlsIjoidGVzdGVtYWlsMTBAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMDQkd1o3Z0NsLktvRjZna3BVZ25kaWJOdXNFNTlVbmRzaUp5RGVDRlJiN04yb1RyRzBlUzl4WWkifSwiaWF0IjoxNjYxOTk5MDY4LCJleHAiOjE2NjIwODU0Njh9.omkNC7TiNaJtNzp0xZxJ93BRUQ8ggf_M2qLQJpsBKu8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Ford Focus\",\r\n    \"picture\": \"https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/focus-st-edition-004-1629818858.jpg\",\r\n    \"price\": 1200.05,\r\n    \"category\": \"Headphones\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://coder-backend-final-nieva.herokuapp.com/products",
+							"protocol": "https",
+							"host": [
+								"coder-backend-final-nieva",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Producto 1",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImVtYWlsIjoidGVzdGVtYWlsMTBAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMDQkd1o3Z0NsLktvRjZna3BVZ25kaWJOdXNFNTlVbmRzaUp5RGVDRlJiN04yb1RyRzBlUzl4WWkifSwiaWF0IjoxNjYxOTk5MDY4LCJleHAiOjE2NjIwODU0Njh9.omkNC7TiNaJtNzp0xZxJ93BRUQ8ggf_M2qLQJpsBKu8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://coder-backend-final-nieva.herokuapp.com/products/1",
+							"protocol": "https",
+							"host": [
+								"coder-backend-final-nieva",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Producto 4",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImVtYWlsIjoidGVzdGVtYWlsMTBAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMDQkd1o3Z0NsLktvRjZna3BVZ25kaWJOdXNFNTlVbmRzaUp5RGVDRlJiN04yb1RyRzBlUzl4WWkifSwiaWF0IjoxNjYxOTk5MDY4LCJleHAiOjE2NjIwODU0Njh9.omkNC7TiNaJtNzp0xZxJ93BRUQ8ggf_M2qLQJpsBKu8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://coder-backend-final-nieva.herokuapp.com/products/4",
+							"protocol": "https",
+							"host": [
+								"coder-backend-final-nieva",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"products",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Productos de Categoría Headphones",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImVtYWlsIjoidGVzdGVtYWlsMTBAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMDQkd1o3Z0NsLktvRjZna3BVZ25kaWJOdXNFNTlVbmRzaUp5RGVDRlJiN04yb1RyRzBlUzl4WWkifSwiaWF0IjoxNjYxOTk5MDY4LCJleHAiOjE2NjIwODU0Njh9.omkNC7TiNaJtNzp0xZxJ93BRUQ8ggf_M2qLQJpsBKu8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://coder-backend-final-nieva.herokuapp.com/products/category/headphones",
+							"protocol": "https",
+							"host": [
+								"coder-backend-final-nieva",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"products",
+								"category",
+								"headphones"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Productos de Categoría Airpods",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImVtYWlsIjoidGVzdGVtYWlsMTBAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMDQkd1o3Z0NsLktvRjZna3BVZ25kaWJOdXNFNTlVbmRzaUp5RGVDRlJiN04yb1RyRzBlUzl4WWkifSwiaWF0IjoxNjYxOTk5MDY4LCJleHAiOjE2NjIwODU0Njh9.omkNC7TiNaJtNzp0xZxJ93BRUQ8ggf_M2qLQJpsBKu8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://coder-backend-final-nieva.herokuapp.com/products/category/airpods",
+							"protocol": "https",
+							"host": [
+								"coder-backend-final-nieva",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"products",
+								"category",
+								"airpods"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Productos de Categoría Inexistente",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImVtYWlsIjoidGVzdGVtYWlsMTBAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMDQkd1o3Z0NsLktvRjZna3BVZ25kaWJOdXNFNTlVbmRzaUp5RGVDRlJiN04yb1RyRzBlUzl4WWkifSwiaWF0IjoxNjYxOTk5MDY4LCJleHAiOjE2NjIwODU0Njh9.omkNC7TiNaJtNzp0xZxJ93BRUQ8ggf_M2qLQJpsBKu8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://coder-backend-final-nieva.herokuapp.com/products/category/dummy",
+							"protocol": "https",
+							"host": [
+								"coder-backend-final-nieva",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"products",
+								"category",
+								"dummy"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar Producto 1",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImVtYWlsIjoidGVzdGVtYWlsMTBAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMDQkd1o3Z0NsLktvRjZna3BVZ25kaWJOdXNFNTlVbmRzaUp5RGVDRlJiN04yb1RyRzBlUzl4WWkifSwiaWF0IjoxNjYxOTk5MDY4LCJleHAiOjE2NjIwODU0Njh9.omkNC7TiNaJtNzp0xZxJ93BRUQ8ggf_M2qLQJpsBKu8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\" : \"Updateddddddd\",\r\n    \"thumbnail\": \"https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/focus-st-edition-004-1629818858.jpg\",\r\n    \"price\": 21205.00,\r\n    \"category\": \"Headphones\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://coder-backend-final-nieva.herokuapp.com/products/1",
+							"protocol": "https",
+							"host": [
+								"coder-backend-final-nieva",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar Producto  con Propiedades Extra",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImVtYWlsIjoidGVzdGVtYWlsMTBAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMDQkd1o3Z0NsLktvRjZna3BVZ25kaWJOdXNFNTlVbmRzaUp5RGVDRlJiN04yb1RyRzBlUzl4WWkifSwiaWF0IjoxNjYxOTk5MDY4LCJleHAiOjE2NjIwODU0Njh9.omkNC7TiNaJtNzp0xZxJ93BRUQ8ggf_M2qLQJpsBKu8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\" : \"Beautiful grey Ford Fiesta in the city\",\r\n    \"thumbnail\": \"https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/focus-st-edition-004-1629818858.jpg\",\r\n    \"price\": 21205.00,\r\n    \"category\": \"Headphones\",\r\n    \"extra\": 200\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://coder-backend-final-nieva.herokuapp.com/products/1",
+							"protocol": "https",
+							"host": [
+								"coder-backend-final-nieva",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar Producto  con Propiedades Menores",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImVtYWlsIjoidGVzdGVtYWlsMTBAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMDQkd1o3Z0NsLktvRjZna3BVZ25kaWJOdXNFNTlVbmRzaUp5RGVDRlJiN04yb1RyRzBlUzl4WWkifSwiaWF0IjoxNjYxOTk5MDY4LCJleHAiOjE2NjIwODU0Njh9.omkNC7TiNaJtNzp0xZxJ93BRUQ8ggf_M2qLQJpsBKu8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\" : \"Beautiful grey Ford Fiesta in the city\",\r\n    \"thumbnail\": \"https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/focus-st-edition-004-1629818858.jpg\",\r\n    \"price\": 21205.00\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://coder-backend-final-nieva.herokuapp.com/products/1",
+							"protocol": "https",
+							"host": [
+								"coder-backend-final-nieva",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar Producto  con Propiedades Erróneas",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImVtYWlsIjoidGVzdGVtYWlsMTBAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMDQkd1o3Z0NsLktvRjZna3BVZ25kaWJOdXNFNTlVbmRzaUp5RGVDRlJiN04yb1RyRzBlUzl4WWkifSwiaWF0IjoxNjYxOTk5MDY4LCJleHAiOjE2NjIwODU0Njh9.omkNC7TiNaJtNzp0xZxJ93BRUQ8ggf_M2qLQJpsBKu8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Ford Fiesta\",\r\n    \"thumbnail\": \"https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/focus-st-edition-004-1629818858.jpg\",\r\n    \"price\": 21205.00,\r\n    \"category\": \"Headphones\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://coder-backend-final-nieva.herokuapp.com/products/1",
+							"protocol": "https",
+							"host": [
+								"coder-backend-final-nieva",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Borrar Producto 1",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImVtYWlsIjoidGVzdGVtYWlsMTBAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMDQkd1o3Z0NsLktvRjZna3BVZ25kaWJOdXNFNTlVbmRzaUp5RGVDRlJiN04yb1RyRzBlUzl4WWkifSwiaWF0IjoxNjYxOTk5MDY4LCJleHAiOjE2NjIwODU0Njh9.omkNC7TiNaJtNzp0xZxJ93BRUQ8ggf_M2qLQJpsBKu8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://coder-backend-final-nieva.herokuapp.com/products/1",
+							"protocol": "https",
+							"host": [
+								"coder-backend-final-nieva",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Borrar Producto 5",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImVtYWlsIjoidGVzdGVtYWlsQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDA0JHpxcjl4RmdMZS9DWVRJTkhHeHlRbi5PZDU1T0ZueVdCVk1iMlg1amRvSDUuR3puZGRoeU5tIn0sImlhdCI6MTY2MTk5NzU1MywiZXhwIjoxNjYyMDgzOTUzfQ.i85KqSB9iTkmikdin4BUhUDZJiMnkT8CaDxjjqiP54A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://coder-backend-final-nieva.herokuapp.com/products/5",
+							"protocol": "https",
+							"host": [
+								"coder-backend-final-nieva",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"products",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Carrito",
+			"item": [
+				{
+					"name": "Crear Carrito",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImVtYWlsIjoidGVzdGVtYWlsQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDA0JHpxcjl4RmdMZS9DWVRJTkhHeHlRbi5PZDU1T0ZueVdCVk1iMlg1amRvSDUuR3puZGRoeU5tIn0sImlhdCI6MTY2MTk5NzU1MywiZXhwIjoxNjYyMDgzOTUzfQ.i85KqSB9iTkmikdin4BUhUDZJiMnkT8CaDxjjqiP54A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://coder-backend-final-nieva.herokuapp.com/cart/",
+							"protocol": "https",
+							"host": [
+								"coder-backend-final-nieva",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"cart",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Agregar Producto a Carrito de Usuario Logueado",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImVtYWlsIjoidGVzdGVtYWlsMTBAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMDQkd1o3Z0NsLktvRjZna3BVZ25kaWJOdXNFNTlVbmRzaUp5RGVDRlJiN04yb1RyRzBlUzl4WWkifSwiaWF0IjoxNjYxOTk5MDY4LCJleHAiOjE2NjIwODU0Njh9.omkNC7TiNaJtNzp0xZxJ93BRUQ8ggf_M2qLQJpsBKu8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://coder-backend-final-nieva.herokuapp.com/cart/products",
+							"protocol": "https",
+							"host": [
+								"coder-backend-final-nieva",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"cart",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Agregar Producto a Carrito 1",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImVtYWlsIjoidGVzdGVtYWlsQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDA0JHpxcjl4RmdMZS9DWVRJTkhHeHlRbi5PZDU1T0ZueVdCVk1iMlg1amRvSDUuR3puZGRoeU5tIn0sImlhdCI6MTY2MTk5NzU1MywiZXhwIjoxNjYyMDgzOTUzfQ.i85KqSB9iTkmikdin4BUhUDZJiMnkT8CaDxjjqiP54A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://coder-backend-final-nieva.herokuapp.com/cart/1/products",
+							"protocol": "https",
+							"host": [
+								"coder-backend-final-nieva",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"cart",
+								"1",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Agregar Producto a Carrito 2",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImVtYWlsIjoidGVzdGVtYWlsQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDA0JHpxcjl4RmdMZS9DWVRJTkhHeHlRbi5PZDU1T0ZueVdCVk1iMlg1amRvSDUuR3puZGRoeU5tIn0sImlhdCI6MTY2MTk5NzU1MywiZXhwIjoxNjYyMDgzOTUzfQ.i85KqSB9iTkmikdin4BUhUDZJiMnkT8CaDxjjqiP54A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://coder-backend-final-nieva.herokuapp.com/cart/2/products",
+							"protocol": "https",
+							"host": [
+								"coder-backend-final-nieva",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"cart",
+								"2",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Productos de Carrito 1",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImVtYWlsIjoidGVzdGVtYWlsMTBAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMDQkd1o3Z0NsLktvRjZna3BVZ25kaWJOdXNFNTlVbmRzaUp5RGVDRlJiN04yb1RyRzBlUzl4WWkifSwiaWF0IjoxNjYxOTk5MDY4LCJleHAiOjE2NjIwODU0Njh9.omkNC7TiNaJtNzp0xZxJ93BRUQ8ggf_M2qLQJpsBKu8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://coder-backend-final-nieva.herokuapp.com/cart/1/products",
+							"protocol": "https",
+							"host": [
+								"coder-backend-final-nieva",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"cart",
+								"1",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Productos de Carrito 2",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImVtYWlsIjoidGVzdGVtYWlsQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDA0JHpxcjl4RmdMZS9DWVRJTkhHeHlRbi5PZDU1T0ZueVdCVk1iMlg1amRvSDUuR3puZGRoeU5tIn0sImlhdCI6MTY2MTk5NzU1MywiZXhwIjoxNjYyMDgzOTUzfQ.i85KqSB9iTkmikdin4BUhUDZJiMnkT8CaDxjjqiP54A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://coder-backend-final-nieva.herokuapp.com/cart/2/products",
+							"protocol": "https",
+							"host": [
+								"coder-backend-final-nieva",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"cart",
+								"2",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Borrar Producto 1 en Carrito 1",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImVtYWlsIjoidGVzdGVtYWlsQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDA0JHpxcjl4RmdMZS9DWVRJTkhHeHlRbi5PZDU1T0ZueVdCVk1iMlg1amRvSDUuR3puZGRoeU5tIn0sImlhdCI6MTY2MTk5NzU1MywiZXhwIjoxNjYyMDgzOTUzfQ.i85KqSB9iTkmikdin4BUhUDZJiMnkT8CaDxjjqiP54A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://coder-backend-final-nieva.herokuapp.com/cart/1/products",
+							"protocol": "https",
+							"host": [
+								"coder-backend-final-nieva",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"cart",
+								"1",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Comprar Carrito 1",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImVtYWlsIjoidGVzdGVtYWlsQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDA0JHpxcjl4RmdMZS9DWVRJTkhHeHlRbi5PZDU1T0ZueVdCVk1iMlg1amRvSDUuR3puZGRoeU5tIn0sImlhdCI6MTY2MTk5NzU1MywiZXhwIjoxNjYyMDgzOTUzfQ.i85KqSB9iTkmikdin4BUhUDZJiMnkT8CaDxjjqiP54A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://coder-backend-final-nieva.herokuapp.com/cart/1",
+							"protocol": "https",
+							"host": [
+								"coder-backend-final-nieva",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"cart",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Comprar Carrito 2",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImVtYWlsIjoidGVzdGVtYWlsQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDA0JHpxcjl4RmdMZS9DWVRJTkhHeHlRbi5PZDU1T0ZueVdCVk1iMlg1amRvSDUuR3puZGRoeU5tIn0sImlhdCI6MTY2MTk5NzU1MywiZXhwIjoxNjYyMDgzOTUzfQ.i85KqSB9iTkmikdin4BUhUDZJiMnkT8CaDxjjqiP54A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://coder-backend-final-nieva.herokuapp.com/cart/2",
+							"protocol": "https",
+							"host": [
+								"coder-backend-final-nieva",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"cart",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Chat",
+			"item": [
+				{
+					"name": "Responder Mensaje de Mail Existente",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImVtYWlsIjoidGVzdGVtYWlsQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDA0JHpxcjl4RmdMZS9DWVRJTkhHeHlRbi5PZDU1T0ZueVdCVk1iMlg1amRvSDUuR3puZGRoeU5tIn0sImlhdCI6MTY2MTk5NzU1MywiZXhwIjoxNjYyMDgzOTUzfQ.i85KqSB9iTkmikdin4BUhUDZJiMnkT8CaDxjjqiP54A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"prueba@gmail.com\",\r\n    \"text\": \"Respondiendo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://coder-backend-final-nieva.herokuapp.com/chat/",
+							"protocol": "https",
+							"host": [
+								"coder-backend-final-nieva",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"chat",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Responder Mensaje de Mail Inexistente",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImVtYWlsIjoidGVzdGVtYWlsQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDA0JHpxcjl4RmdMZS9DWVRJTkhHeHlRbi5PZDU1T0ZueVdCVk1iMlg1amRvSDUuR3puZGRoeU5tIn0sImlhdCI6MTY2MTk5NzU1MywiZXhwIjoxNjYyMDgzOTUzfQ.i85KqSB9iTkmikdin4BUhUDZJiMnkT8CaDxjjqiP54A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"ddd@gmail.com\",\r\n    \"text\": \"This is a response\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://coder-backend-final-nieva.herokuapp.com/chat/",
+							"protocol": "https",
+							"host": [
+								"coder-backend-final-nieva",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"chat",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
